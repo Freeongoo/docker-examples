@@ -19,7 +19,7 @@ docker run -d -p 8080:80 freeongoo/python
 Open in browser:  
 `http://localhost:8080`
 
-## Add proxy from apache
+## Add proxy from apache in local machine (not in docker)
 
 ### Install and conf apache
 ```
