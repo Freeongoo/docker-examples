@@ -22,3 +22,8 @@ docker run -d -p 8080:80 freeongoo/php56
 
 Open in browser:  
 `http://localhost:8080/index.php`
+
+# Built With
+* Debian 8
+* php 5.6
+* apache 2.4
