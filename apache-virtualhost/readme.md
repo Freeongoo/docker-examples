@@ -14,7 +14,7 @@ docker build -t freeongoo/apache .
 docker run -d -p 8080:80 freeongoo/apache
 ```
 
-Add virtual host to /etc/hosts:  
+Add local domain to /etc/hosts:  
 `127.0.0.1  mylocal.loc`
 
 ### Check
