@@ -1,0 +1,29 @@
+version: "3.1"
+services:
+  mysql:
+    container_name: mysql8
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    image: mysql:8
+    volumes:
+      - /home/vasya/Docker/storage/mysql:/var/lib/mysql
+    restart: always
+    ports:
+      - "3333:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - web
+  phpmyadmin:
+    container_name: myadmin
+    image: phpmyadmin/phpmyadmin
+    links:
+      - "mysql:db"
+    ports:
+      - "9988:80"
+    restart: always
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
